@@ -1,1 +1,1 @@
-# EE421_Honors_Project
+# EE 421 Communication Systems Honors Project
