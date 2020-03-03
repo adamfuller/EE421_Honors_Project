@@ -87,7 +87,6 @@ class MainViewModel {
   }
 
   void addFilter() {
-    print("\n\nImplement addFilter\n\n");
     this.filters.add(this.currentFilterSettings["type"]);
     this.filterSettings.add(this.currentFilterSettings);
     this.currentFilterSettings = {};
