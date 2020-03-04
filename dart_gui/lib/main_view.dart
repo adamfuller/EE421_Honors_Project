@@ -82,10 +82,9 @@ class _MainViewState extends State<MainView> {
           onPaint: (c, size, progress) {
             double w = size.width;
             double h = size.height;
-            Paint p1 = Paint()..color = Colors.blue;
+            Paint p1 = (Paint()..color = Colors.blue)..strokeWidth = 1.5;
             Paint p2 = Paint()..color = Colors.red;
             Paint p3 = Paint()..color = Colors.yellow.withAlpha(75);
-            p1.strokeWidth = 1.5;
             p2.strokeWidth = 1.5;
             p3.strokeWidth = 1.5;
 
@@ -110,12 +109,12 @@ class _MainViewState extends State<MainView> {
               double x2 = (i + 1) / MainViewModel.signalLength * w;
               c.drawLine(Offset(x1, scale(vm.signal2[i])), Offset(x2, scale(vm.signal2[i + 1])), p2);
             }
-            if (vm.operation != null){
-              for (int i = 0; i<vm.signal1.length-1;i++){
+            if (vm.operation != null) {
+              for (int i = 0; i < vm.signal1.length - 1; i++) {
                 double x1 = (i / MainViewModel.signalLength) * w;
                 double x2 = (i + 1) / MainViewModel.signalLength * w;
                 double val1 = vm.operation(vm.signal1[i], vm.signal2[i]);
-                double val2 = vm.operation(vm.signal1[i+1], vm.signal2[i+1]);
+                double val2 = vm.operation(vm.signal1[i + 1], vm.signal2[i + 1]);
                 c.drawLine(Offset(x1, scale(val1)), Offset(x2, scale(val2)), p3);
               }
             }
