@@ -1,0 +1,3 @@
+12 bit, 20Mhz DAC:
+https://www.analog.com/media/en/technical-documentation/data-sheets/DAC8512.pdf
+
